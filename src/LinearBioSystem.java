@@ -187,7 +187,8 @@ public class LinearBioSystem {
 
         int L = 500, K = 100, nReps = 10;
         double duration = 500;
-        String filename = "linearGradient-spatialDistribution";
+        String filename = "fastGrowers-linearGradient-spatialDistribution";
+        boolean alreadyRecorded = false;
 
         ArrayList<Double> xVals = new ArrayList<>(L);
         for(double i = 0; i < L; i++){
@@ -197,20 +198,23 @@ public class LinearBioSystem {
         double minC = 0., maxC = 12.;
         int S = 500;
 
-        for(int i = 0; i < nReps; i++){
-            LinearBioSystem lbs = new LinearBioSystem(L, K, S, minC, maxC);
+        LinearBioSystem lbs = new LinearBioSystem(L, K, S, minC, maxC);
 
-            while(lbs.getTimeElapsed() <= duration && !lbs.getPopulationDead()){
-                lbs.performAction();
+        while(lbs.getTimeElapsed() <= duration && !lbs.getPopulationDead()){
+            lbs.performAction();
 
-                if(lbs.getTimeElapsed()%100. == 0){
-                    ArrayList<Double> popVals = lbs.getSpatialDistribution();
-                    String currentFilename = filename+"-"+String.valueOf(lbs.getTimeElapsed());
-                    Toolbox.writeTwoArraylistsToFile(xVals, popVals, currentFilename);
-                }
+            if((lbs.getTimeElapsed()%100. >= 0. && lbs.getTimeElapsed()%100. <= 0.01) && !alreadyRecorded){
+                System.out.println("Success "+(int)lbs.getTimeElapsed());
+                alreadyRecorded = true;
+                ArrayList<Double> popVals = lbs.getSpatialDistribution();
+                String currentFilename = filename+"-"+String.valueOf((int)lbs.getTimeElapsed());
+                Toolbox.writeTwoArraylistsToFile(xVals, popVals, currentFilename);
             }
-            System.out.println("rep: "+i);
+
+            if(lbs.getTimeElapsed()%100. >= 0.1 && alreadyRecorded) alreadyRecorded = false;
+
         }
+        System.out.println("duration "+lbs.getTimeElapsed());
 
     }
 
