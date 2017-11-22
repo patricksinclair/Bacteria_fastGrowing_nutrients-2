@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2233c143-cf77-49d0-8467-89caccd6f915" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bacteria_slowGrowing_nutrients2/BioSystem.class" afterPath="$PROJECT_DIR$/out/production/Bacteria_slowGrowing_nutrients2/BioSystem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bacteria_slowGrowing_nutrients2/FastBacMain.class" afterPath="$PROJECT_DIR$/out/production/Bacteria_slowGrowing_nutrients2/FastBacMain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bacteria_slowGrowing_nutrients2/Toolbox.class" afterPath="$PROJECT_DIR$/out/production/Bacteria_slowGrowing_nutrients2/Toolbox.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinearBioSystem.java" afterPath="$PROJECT_DIR$/src/LinearBioSystem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BioSystem.java" afterPath="$PROJECT_DIR$/src/BioSystem.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BioSystem.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BioSystem.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BioSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6950">
-              <caret line="291" column="16" lean-forward="false" selection-start-line="291" selection-start-column="16" selection-end-line="291" selection-end-column="16" />
+            <state relative-caret-position="1459">
+              <caret line="282" column="5" lean-forward="false" selection-start-line="282" selection-start-column="5" selection-end-line="282" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinearBioSystem.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LinearBioSystem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinearBioSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="209" column="74" lean-forward="false" selection-start-line="209" selection-start-column="74" selection-end-line="209" selection-end-column="74" />
+            <state relative-caret-position="1159">
+              <caret line="216" column="61" lean-forward="true" selection-start-line="187" selection-start-column="7" selection-end-line="216" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,9 +105,9 @@
         <option value="$PROJECT_DIR$/src/Bacteria.java" />
         <option value="$PROJECT_DIR$/src/Microhabitat.java" />
         <option value="$PROJECT_DIR$/src/Toolbox.java" />
-        <option value="$PROJECT_DIR$/src/BioSystem.java" />
         <option value="$PROJECT_DIR$/src/FastBacMain.java" />
         <option value="$PROJECT_DIR$/src/LinearBioSystem.java" />
+        <option value="$PROJECT_DIR$/src/BioSystem.java" />
       </list>
     </option>
   </component>
@@ -147,7 +143,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../slowBacNutClone/Bacteria_slowGrowing_nutrients-2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -527,16 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BioSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6950">
-          <caret line="291" column="16" lean-forward="false" selection-start-line="291" selection-start-column="16" selection-end-line="291" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FastBacMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -547,8 +533,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinearBioSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="209" column="74" lean-forward="false" selection-start-line="209" selection-start-column="74" selection-end-line="209" selection-end-column="74" />
+        <state relative-caret-position="1159">
+          <caret line="216" column="61" lean-forward="true" selection-start-line="187" selection-start-column="7" selection-end-line="216" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BioSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1459">
+          <caret line="282" column="5" lean-forward="false" selection-start-line="282" selection-start-column="5" selection-end-line="282" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

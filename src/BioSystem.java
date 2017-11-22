@@ -238,7 +238,7 @@ public class BioSystem {
         int nPoints = 10, nReps = 5;
         int L = 500, K = 100;
         double duration = 500.;
-        String filename = "gradVsNutrientsScaled", token = "bla";
+        String filename = "slowGrowers-gradVsNutrientsScaled", token = "bla";
 
         ArrayList<Double> sVals = new ArrayList<Double>();
         ArrayList<Double> alphaVals = new ArrayList<Double>();
@@ -248,25 +248,8 @@ public class BioSystem {
         int initS = 10, finalS = 1000;
         int sIncrement = ((finalS - initS)/nPoints);
 
-        double initAlpha = 0.00, finalAlpha = 0.1, zerothAlpha = 0.;
+        double initAlpha = 0.0, finalAlpha = 0.1, zerothAlpha = 0.;
         double alphaIncrement = (finalAlpha - initAlpha)/(double)nPoints;
-
-        //this loop runs with no antibiotics to calculate the maximum value attainable for each nutrient
-        //value
-        for(int s = initS; s<=finalS; s+=sIncrement){
-
-            double avgMaxPopulation = 0.;
-
-            for(int r = 0; r < nReps; r++){
-                System.out.println("zerothS = "+s+"\trep: "+r);
-                BioSystem bs = new BioSystem(L, K, s, zerothAlpha);
-
-                while(bs.getTimeElapsed() <= duration && !bs.getPopulationDead()) bs.performAction();
-                avgMaxPopulation += bs.getCurrentPopulation();
-            }
-            maxPopVals.add(avgMaxPopulation/(double)nReps);
-        }
-
 
         int indexCounter = 0;
         for(int s = initS; s <= finalS; s += sIncrement) {
@@ -276,6 +259,7 @@ public class BioSystem {
                 alphaVals.add(alpha);
 
                 double avgMaxPopulation = 0.;
+                double avgMaxPossPopulation = 0.;
 
                 for(int r = 0; r < nReps; r++) {
 
@@ -283,12 +267,13 @@ public class BioSystem {
 
                     while(bs.getTimeElapsed() <= duration && !bs.getPopulationDead()) bs.performAction();
 
+                    if(alpha == initAlpha) avgMaxPossPopulation += bs.getCurrentPopulation();
 
                     avgMaxPopulation += bs.getCurrentPopulation();
                     System.out.println(bs.getCurrentPopulation());
                     System.out.println("sVal: " + s + "\t alphaVal: " + alpha + "\t rep: " + r);
                 }
-
+                maxPopVals.add(avgMaxPossPopulation/(double)nReps);
                 popVals.add(avgMaxPopulation/((double)nReps*maxPopVals.get(indexCounter)));
 
             }
