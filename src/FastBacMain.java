@@ -4,7 +4,7 @@ public class FastBacMain {
 
         //BioSystem.delayedAntibioticPresence();
         //BioSystem.antibioticVsNutrients();
-        //bla
+        //bla bla
         LinearBioSystem.spatialDistribution();
     }
 }
