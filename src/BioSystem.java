@@ -89,6 +89,14 @@ public class BioSystem {
         return runningTotal;
     }
 
+    public ArrayList<Double> getSpatialDistribution(){
+        ArrayList<Double> microhabPops = new ArrayList<>(L);
+        for(int i = 0; i < L; i++){
+            microhabPops.add((double)microhabitats[i].getN());
+        }
+        return microhabPops;
+    }
+
 
     public Microhabitat getMicrohabitat(int i){
         return microhabitats[i];
@@ -282,6 +290,43 @@ public class BioSystem {
         Toolbox.writeContoursToFile(sVals, alphaVals, popVals, filename);
     }
 
+
+    public static void spatialDistribution(){
+
+        int L = 500, K = 100, nReps = 10;
+        double duration = 2000;
+        double alpha = 0.02;
+        int S = 500;
+
+        String filename = "fastGrowers-alpha-"+String.valueOf(alpha)+"-spatialDistribution";
+        boolean alreadyRecorded = false;
+
+        ArrayList<Double> xVals = new ArrayList<>(L);
+        for(double i = 0; i < L; i++){
+            xVals.add(i);
+        }
+
+
+
+        BioSystem lbs = new BioSystem(L, K, S, alpha);
+
+        while(lbs.getTimeElapsed() <= duration && !lbs.getPopulationDead()){
+            lbs.performAction();
+
+            if((lbs.getTimeElapsed()%100. >= 0. && lbs.getTimeElapsed()%100. <= 0.01) && !alreadyRecorded){
+                System.out.println("Success "+(int)lbs.getTimeElapsed());
+                alreadyRecorded = true;
+                ArrayList<Double> popVals = lbs.getSpatialDistribution();
+                String currentFilename = filename+"-"+String.valueOf((int)lbs.getTimeElapsed());
+                Toolbox.writeTwoArraylistsToFile(xVals, popVals, currentFilename);
+            }
+
+            if(lbs.getTimeElapsed()%100. >= 0.1 && alreadyRecorded) alreadyRecorded = false;
+
+        }
+        System.out.println("duration "+lbs.getTimeElapsed());
+
+    }
 
 
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Bacteria_slowGrowing_nutrients2.iml" filepath="$PROJECT_DIR$/Bacteria_slowGrowing_nutrients2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bacteria_fastGrowing_nutrients2.iml" filepath="$PROJECT_DIR$/Bacteria_fastGrowing_nutrients2.iml" />
     </modules>
   </component>
 </project>
