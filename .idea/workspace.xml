@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2233c143-cf77-49d0-8467-89caccd6f915" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Bacteria_slowGrowing_nutrients2.iml" afterPath="$PROJECT_DIR$/Bacteria_fastGrowing_nutrients2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BioSystem.java" afterPath="$PROJECT_DIR$/src/BioSystem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FastBacMain.java" afterPath="$PROJECT_DIR$/src/FastBacMain.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FastBacMain.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FastBacMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FastBacMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            <state relative-caret-position="180">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -47,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BioSystem.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BioSystem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BioSystem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="383">
@@ -114,9 +111,9 @@
         <option value="$PROJECT_DIR$/src/Bacteria.java" />
         <option value="$PROJECT_DIR$/src/Microhabitat.java" />
         <option value="$PROJECT_DIR$/src/Toolbox.java" />
-        <option value="$PROJECT_DIR$/src/FastBacMain.java" />
         <option value="$PROJECT_DIR$/src/LinearBioSystem.java" />
         <option value="$PROJECT_DIR$/src/BioSystem.java" />
+        <option value="$PROJECT_DIR$/src/FastBacMain.java" />
       </list>
     </option>
   </component>
@@ -627,14 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FastBacMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LinearBioSystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -659,6 +648,14 @@
             <element signature="e#7657#7665#0" expanded="true" />
             <element signature="e#7721#7729#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FastBacMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
