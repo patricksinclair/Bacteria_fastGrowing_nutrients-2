@@ -89,6 +89,18 @@ public class BioSystem {
         return runningTotal;
     }
 
+    public boolean fullMicrohabOfMutants(){
+
+        for(int i = 0; i < L; i++){
+            if(microhabitats[i].getN() > 0){
+
+                if(microhabitats[i].fullOfMutants()) return true;
+
+            }
+        }
+        return false;
+    }
+
     public ArrayList<Double> getSpatialDistribution(){
         ArrayList<Double> microhabPops = new ArrayList<>(L);
         for(int i = 0; i < L; i++){
@@ -141,9 +153,17 @@ public class BioSystem {
         Bacteria parentBac = microhabitats[currentL].getBacteria(bacteriumIndex);
         int m = parentBac.getM();
 
-        Bacteria childBac = new Bacteria(m);
+        double mu = parentBac.getMu();
+        double s = rand.nextDouble();
 
+        Bacteria childBac = new Bacteria(m);
+        if(s < mu/2.) {
+            childBac.increaseGenotype();
+        } else if(s >= mu/2. && s < mu) {
+            childBac.decreaseGenotype();
+        }
         microhabitats[currentL].addABacterium(childBac);
+
     }
 
 
@@ -194,6 +214,7 @@ public class BioSystem {
         }
     }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public static void antibioticVsNutrients(){
 
@@ -246,7 +267,7 @@ public class BioSystem {
         int nPoints = 10, nReps = 5;
         int L = 500, K = 100;
         double duration = 500.;
-        String filename = "slowGrowers-gradVsNutrientsScaled", token = "bla";
+        String filename = "fastGrowers-gradVsNutrientsScaled", token = "bla";
 
         ArrayList<Double> sVals = new ArrayList<Double>();
         ArrayList<Double> alphaVals = new ArrayList<Double>();
@@ -326,6 +347,49 @@ public class BioSystem {
         }
         System.out.println("duration "+lbs.getTimeElapsed());
 
+    }
+
+
+    public static void timeTilResistance(){
+
+        int nPoints = 10, nReps = 5;
+        int L = 500, K = 100;
+        double duration = 500.;
+        String filename = "fastGrowers-timesTilResistance";
+
+        ArrayList<Double> sVals = new ArrayList<Double>();
+        ArrayList<Double> alphaVals = new ArrayList<Double>();
+        ArrayList<Double> tVals = new ArrayList<Double>();
+
+        int initS = 10, finalS = 1000;
+        int sIncrement = ((finalS - initS)/nPoints);
+
+        double initAlpha = 0.01, finalAlpha = 0.1;
+        double alphaIncrement = (finalAlpha - initAlpha)/(double)nPoints;
+
+
+        for(int s = initS; s <= finalS; s += sIncrement) {
+            sVals.add((double)s);
+
+            for(double alpha = initAlpha; alpha <= finalAlpha; alpha += alphaIncrement) {
+                alphaVals.add(alpha);
+
+                double avgTimeTilRes = 0.;
+
+                for(int r = 0; r < nReps; r++) {
+
+                    BioSystem bs = new BioSystem(L, K, s, alpha);
+
+                    while(!bs.fullMicrohabOfMutants() && !bs.getPopulationDead()) bs.performAction();
+
+                    avgTimeTilRes+= bs.getTimeElapsed();
+                    System.out.println(bs.getTimeElapsed());
+                    System.out.println("sVal: " + s + "\t alphaVal: " + alpha + "\t rep: " + r);
+                }
+                tVals.add(avgTimeTilRes/((double)nReps));
+            }
+        }
+        Toolbox.writeContoursToFile(sVals, alphaVals, tVals, filename);
     }
 
 

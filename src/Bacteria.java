@@ -12,27 +12,35 @@ public class Bacteria {
     //death rate
     private double d = 0.;
     //mutation rate
-    private double mu = 0.;
+    private double mu = 1.e-5;
 
     public Bacteria(int m){
         this.m = m;
-        this.finalM = 6;
+        this.finalM = 2;
     }
 
 
     public int getM(){return m;}
+    public int getFinalM(){return finalM;}
     public double getB(){return b;}
     public double getD(){return d;}
+    public double getMu(){return mu;}
 
 
     //MIC now depends on the nutrients present in the microhabitat
     //s = no. of nutrients, s_max =  max no. of nutrients present at the start
     public double beta(double s, double s_max, double K){
 
-        double mu = s/(K+s);
-        double mu_max = s_max/(K+s_max);
-        //System.out.println("beta:\t "+ (10. - 9.*mu/mu_max));
-        return 10. - 9.*mu/mu_max;
+        if(m == 1){
+
+            double mu = s/(K+s);
+            double mu_max = s_max/(K+s_max);
+            return 10. - 9.*mu/mu_max;
+
+        }else {
+            return 100.;
+        }
+
     }
 
     public double growthRate(double c, double s, double s_max, double K){
@@ -48,6 +56,17 @@ public class Bacteria {
 
         //System.out.println("rep rate:\t"+growthRate(c, s, s_max, K) * s/(K + s));
         return growthRate(c, s, s_max, K) * s/(K + s);
+    }
+
+    public void increaseGenotype(){
+        if(m < finalM){
+            m++;
+        }
+    }
+    public void decreaseGenotype(){
+        if(m > initialM){
+            m--;
+        }
     }
 
 

@@ -49,6 +49,16 @@ public class Microhabitat {
         return population.get(i);
     }
 
+    public boolean fullOfMutants(){
+
+        int mutantCounter = 0;
+        for(int i = 0; i < population.size(); i++){
+            if(population.get(i).getM() > 1) mutantCounter++;
+        }
+        if(mutantCounter >= K) return true;
+        else return false;
+    }
+
     public void innoculateWithABActeria(){
         int initGentotype = 1;
         population.add(new Bacteria(initGentotype));
