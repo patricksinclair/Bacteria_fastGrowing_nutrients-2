@@ -89,6 +89,16 @@ public class BioSystem {
         return runningTotal;
     }
 
+    public int nMutants(){
+        int runningTotal = 0;
+        for(int i = 0; i < L; i++){
+            for(int j = 0; j < microhabitats[i].getPopulation().size(); j++){
+                if(microhabitats[i].getPopulation().get(j).getM() > 1) runningTotal++;
+            }
+        }
+        return runningTotal;
+    }
+
     public boolean fullMicrohabOfMutants(){
 
         for(int i = 0; i < L; i++){
@@ -354,12 +364,14 @@ public class BioSystem {
 
         int nPoints = 10, nReps = 5;
         int L = 500, K = 100;
-        double duration = 500.;
+        double duration = 10000.;
         String filename = "fastGrowers-timesTilResistance";
+        String filenameNMut = "fastGrowers-noOfMutants";
 
         ArrayList<Double> sVals = new ArrayList<Double>();
         ArrayList<Double> alphaVals = new ArrayList<Double>();
         ArrayList<Double> tVals = new ArrayList<Double>();
+        ArrayList<Double> nMutVals = new ArrayList<>();
 
         int initS = 10, finalS = 1000;
         int sIncrement = ((finalS - initS)/nPoints);
@@ -375,12 +387,13 @@ public class BioSystem {
                 alphaVals.add(alpha);
 
                 double avgTimeTilRes = 0.;
+                double avgNoOfMutants = 0;
 
                 for(int r = 0; r < nReps; r++) {
 
                     BioSystem bs = new BioSystem(L, K, s, alpha);
 
-                    while(!bs.fullMicrohabOfMutants() && !bs.getPopulationDead()) bs.performAction();
+                    while(!bs.fullMicrohabOfMutants() && !bs.getPopulationDead() && bs.getTimeElapsed() < duration) bs.performAction();
 
                     avgTimeTilRes+= bs.getTimeElapsed();
                     System.out.println(bs.getTimeElapsed());
