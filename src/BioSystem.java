@@ -119,6 +119,36 @@ public class BioSystem {
         return microhabPops;
     }
 
+    //method for getting the current growth rates in each microhabitat
+    public ArrayList<Double> getGrowthRateDistributions(){
+        ArrayList<Double> growthRates = new ArrayList<>(L);
+
+        for (int i = 0; i < L; i++){
+            Microhabitat m = microhabitats[i];
+            double s_ = m.getS(), s_max_ = m.getS_max();
+            double K_ = m.getK_prime();
+            double c_ = m.getC();
+
+            double mu = s_/(K_+s_);
+            double mu_max = s_max_/(K_+s_max_);
+            double beta = 10. - 9.*mu/mu_max;
+
+            double gR = Math.max(1.-(c_/beta)*(c_/beta), 0.);
+            double repR = gR*(s_/(K_+s_));
+            growthRates.add(repR);
+        }
+        return growthRates;
+    }
+
+    public ArrayList<Double> getNutrientDistribution(){
+        ArrayList<Double> sVals = new ArrayList<>(L);
+
+        for(int i = 0; i < L; i++){
+            sVals.add((double)microhabitats[i].getS());
+        }
+        return sVals;
+    }
+
 
     public Microhabitat getMicrohabitat(int i){
         return microhabitats[i];
@@ -321,15 +351,18 @@ public class BioSystem {
         Toolbox.writeContoursToFile(sVals, alphaVals, popVals, filename);
     }
 
-
-    public static void spatialDistribution(){
+    //this was modified to also plot the growth rates and nutrient distributions over time
+    public static void spatialAndNutrientDistributions(){
 
         int L = 500, K = 100, nReps = 10;
+        double interval = 100.;
         double duration = 2000;
         double alpha = 0.02;
         int S = 500;
 
         String filename = "fastGrowers-alpha-"+String.valueOf(alpha)+"-spatialDistribution";
+        String filenameGRates = "fastGrowers-alpha-"+String.valueOf(alpha)+"-gRateDistribution";
+        String filenameNutrients = "fastGrowers-alpha-"+String.valueOf(alpha)+"-nutrientDistribution";
         boolean alreadyRecorded = false;
 
         ArrayList<Double> xVals = new ArrayList<>(L);
@@ -338,24 +371,30 @@ public class BioSystem {
         }
 
 
+        BioSystem bs = new BioSystem(L, K, S, alpha);
 
-        BioSystem lbs = new BioSystem(L, K, S, alpha);
+        while(bs.getTimeElapsed() <= duration && !bs.getPopulationDead()){
+            bs.performAction();
 
-        while(lbs.getTimeElapsed() <= duration && !lbs.getPopulationDead()){
-            lbs.performAction();
+            if((bs.getTimeElapsed()%interval >= 0. && bs.getTimeElapsed()%interval <= 0.01) && !alreadyRecorded){
 
-            if((lbs.getTimeElapsed()%100. >= 0. && lbs.getTimeElapsed()%100. <= 0.01) && !alreadyRecorded){
-                System.out.println("Success "+(int)lbs.getTimeElapsed());
+                System.out.println("Success "+(int)bs.getTimeElapsed());
                 alreadyRecorded = true;
-                ArrayList<Double> popVals = lbs.getSpatialDistribution();
-                String currentFilename = filename+"-"+String.valueOf((int)lbs.getTimeElapsed());
-                Toolbox.writeTwoArraylistsToFile(xVals, popVals, currentFilename);
+
+                ArrayList<Double> popVals = bs.getSpatialDistribution();
+                ArrayList<Double> gRateVals = bs.getGrowthRateDistributions();
+                ArrayList<Double> nutrientVals = bs.getNutrientDistribution();
+
+                String timeValue = "-"+String.valueOf((int)bs.getTimeElapsed());
+                Toolbox.writeTwoArraylistsToFile(xVals, popVals, (filename+timeValue));
+                Toolbox.writeTwoArraylistsToFile(xVals, gRateVals, (filenameGRates+timeValue));
+                Toolbox.writeTwoArraylistsToFile(xVals, nutrientVals, (filenameNutrients+timeValue));
             }
 
-            if(lbs.getTimeElapsed()%100. >= 0.1 && alreadyRecorded) alreadyRecorded = false;
+            if(bs.getTimeElapsed()%100. >= 0.1 && alreadyRecorded) alreadyRecorded = false;
 
         }
-        System.out.println("duration "+lbs.getTimeElapsed());
+        System.out.println("duration "+bs.getTimeElapsed());
 
     }
 
@@ -364,7 +403,7 @@ public class BioSystem {
 
         int nPoints = 10, nReps = 5;
         int L = 500, K = 100;
-        double duration = 10000.;
+        double duration = 5000.;
         String filename = "fastGrowers-timesTilResistance";
         String filenameNMut = "fastGrowers-noOfMutants";
 
@@ -395,14 +434,17 @@ public class BioSystem {
 
                     while(!bs.fullMicrohabOfMutants() && !bs.getPopulationDead() && bs.getTimeElapsed() < duration) bs.performAction();
 
-                    avgTimeTilRes+= bs.getTimeElapsed();
+                    avgTimeTilRes+=bs.getTimeElapsed();
+                    avgNoOfMutants+=bs.nMutants();
                     System.out.println(bs.getTimeElapsed());
                     System.out.println("sVal: " + s + "\t alphaVal: " + alpha + "\t rep: " + r);
                 }
                 tVals.add(avgTimeTilRes/((double)nReps));
+                nMutVals.add(avgNoOfMutants/(double)nReps);
             }
         }
         Toolbox.writeContoursToFile(sVals, alphaVals, tVals, filename);
+        Toolbox.writeContoursToFile(sVals, alphaVals, nMutVals, filenameNMut);
     }
 
 

@@ -6,7 +6,7 @@ public class FastBacMain {
         //BioSystem.antibioticVsNutrients();
         //bla bla
         //BioSystem.spatialDistribution();
-        BioSystem.timeTilResistance();
+        //BioSystem.timeTilResistance();
         /*double alpha = Math.log(11.5)/500.;
         System.out.println(alpha);
         double c_500 = Math.exp(alpha*500) - 1;
