@@ -5,7 +5,7 @@ public class FastBacMain {
         //BioSystem.delayedAntibioticPresence();
         //BioSystem.antibioticVsNutrients();
         //bla bla bla
-        //BioSystem.spatialDistribution();
+        BioSystem.spatialAndNutrientDistributions();
         //BioSystem.timeTilResistance();
         /*double alpha = Math.log(11.5)/500.;
         System.out.println(alpha);

@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2233c143-cf77-49d0-8467-89caccd6f915" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bacteria.java" afterPath="$PROJECT_DIR$/src/Bacteria.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BioSystem.java" afterPath="$PROJECT_DIR$/src/BioSystem.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FastBacMain.java" afterPath="$PROJECT_DIR$/src/FastBacMain.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -15,14 +12,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FastBacMain.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FastBacMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FastBacMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+            <state relative-caret-position="126">
+              <caret line="7" column="52" lean-forward="true" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -31,9 +27,22 @@
       <file leaf-file-name="Bacteria.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bacteria.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="48" column="72" lean-forward="false" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="72" />
-              <folding />
+            <state relative-caret-position="864">
+              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding>
+                <marker date="1513078377757" expanded="true" signature="544:596" ph="{...}" />
+                <marker date="1513078377757" expanded="true" signature="620:631" ph="{...}" />
+                <marker date="1513078377757" expanded="true" signature="658:674" ph="{...}" />
+                <marker date="1513078377757" expanded="true" signature="699:710" ph="{...}" />
+                <marker date="1513078377757" expanded="true" signature="735:746" ph="{...}" />
+                <marker date="1513078377757" expanded="true" signature="772:784" ph="{...}" />
+                <marker date="1513078377757" expanded="true" signature="989:1188" ph="{...}" />
+                <marker date="1513078377757" expanded="true" signature="1262:1460" ph="{...}" />
+                <marker date="1513078377757" expanded="true" signature="1539:1686" ph="{...}" />
+                <marker date="1513078377757" expanded="true" signature="1722:1780" ph="{...}" />
+                <marker date="1513078377757" expanded="true" signature="1815:1875" ph="{...}" />
+                <marker date="1513078377757" expanded="true" signature="1952:2143" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,8 +50,8 @@
       <file leaf-file-name="Microhabitat.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Microhabitat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="e#1001#1002#0" expanded="true" />
                 <element signature="e#1041#1042#0" expanded="true" />
@@ -51,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BioSystem.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BioSystem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BioSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1640">
-              <caret line="438" column="22" lean-forward="false" selection-start-line="438" selection-start-column="22" selection-end-line="438" selection-end-column="22" />
+            <state relative-caret-position="784">
+              <caret line="450" column="1" lean-forward="false" selection-start-line="450" selection-start-column="1" selection-end-line="450" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#7806#7814#0" expanded="true" />
@@ -76,7 +85,7 @@
       <file leaf-file-name="LinearBioSystem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinearBioSystem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1475">
+            <state relative-caret-position="1062">
               <caret line="68" column="4" lean-forward="false" selection-start-line="68" selection-start-column="4" selection-end-line="74" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -88,7 +97,7 @@
       <file leaf-file-name="Toolbox.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Toolbox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
+            <state relative-caret-position="360">
               <caret line="24" column="23" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -122,16 +131,15 @@
         <option value="$PROJECT_DIR$/src/LinearBioSystem.java" />
         <option value="$PROJECT_DIR$/src/Microhabitat.java" />
         <option value="$PROJECT_DIR$/src/Bacteria.java" />
-        <option value="$PROJECT_DIR$/src/FastBacMain.java" />
         <option value="$PROJECT_DIR$/src/BioSystem.java" />
+        <option value="$PROJECT_DIR$/src/FastBacMain.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1942" />
-    <option name="height" value="1056" />
+    <option name="y" value="28" />
+    <option name="width" value="1920" />
+    <option name="height" value="1018" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -148,11 +156,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="ProjectPane" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -174,22 +182,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.FastBacMain">
-    <configuration default="false" name="SlowBacMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="SlowBacMain" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Bacteria_slowGrowing_nutrients2" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="FastBacMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="FastBacMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="FastBacMain" />
       <option name="VM_PARAMETERS" value="" />
@@ -202,14 +195,20 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Bacteria_fastGrowing_nutrients2" />
       <envs />
-      <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    <configuration name="SlowBacMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="SlowBacMain" />
+      <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-      <method />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Bacteria_slowGrowing_nutrients2" />
+      <envs />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -217,7 +216,6 @@
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
-      <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -232,7 +230,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -253,7 +250,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -266,7 +262,12 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Bacteria_slowGrowing_nutrients2" />
       <envs />
-      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -274,7 +275,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -302,7 +302,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
     </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.SlowBacMain" />
@@ -329,25 +328,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1056" extended-state="6" />
+    <frame x="0" y="28" width="1920" height="1018" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.50213903" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23370786" sideWeight="0.49786097" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.49786097" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18770054" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -355,9 +351,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -376,6 +375,86 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/FastBacMain.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bacteria.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <marker date="1513078377757" expanded="true" signature="544:596" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="620:631" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="658:674" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="699:710" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="735:746" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="772:784" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="989:1188" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1262:1460" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1539:1686" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1722:1780" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1815:1875" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1952:2143" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Microhabitat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#1001#1002#0" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinearBioSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1062">
+          <caret line="68" column="4" lean-forward="false" selection-start-line="68" selection-start-column="4" selection-end-line="74" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Toolbox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="23" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BioSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7110">
+          <caret line="408" column="1" lean-forward="true" selection-start-line="408" selection-start-column="1" selection-end-line="408" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7806#7814#0" expanded="true" />
+            <element signature="e#7865#7873#0" expanded="true" />
+            <element signature="e#7926#7934#0" expanded="true" />
+            <element signature="e#9413#9421#0" expanded="true" />
+            <element signature="e#9476#9484#0" expanded="true" />
+            <element signature="e#9537#9545#0" expanded="true" />
+            <element signature="e#9601#9609#0" expanded="true" />
+            <element signature="e#13324#13332#0" expanded="true" />
+            <element signature="e#13387#13395#0" expanded="true" />
+            <element signature="e#13446#13454#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FastBacMain.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
@@ -386,7 +465,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding />
+          <folding>
+            <marker date="1513078377757" expanded="true" signature="544:596" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="620:631" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="658:674" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="699:710" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="735:746" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="772:784" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="989:1188" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1262:1460" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1539:1686" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1722:1780" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1815:1875" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1952:2143" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -453,7 +545,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-          <folding />
+          <folding>
+            <marker date="1513078377757" expanded="true" signature="544:596" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="620:631" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="658:674" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="699:710" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="735:746" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="772:784" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="989:1188" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1262:1460" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1539:1686" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1722:1780" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1815:1875" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1952:2143" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -520,7 +625,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-          <folding />
+          <folding>
+            <marker date="1513078377757" expanded="true" signature="544:596" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="620:631" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="658:674" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="699:710" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="735:746" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="772:784" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="989:1188" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1262:1460" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1539:1686" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1722:1780" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1815:1875" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1952:2143" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -587,7 +705,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-          <folding />
+          <folding>
+            <marker date="1513078377757" expanded="true" signature="544:596" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="620:631" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="658:674" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="699:710" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="735:746" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="772:784" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="989:1188" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1262:1460" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1539:1686" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1722:1780" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1815:1875" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1952:2143" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -654,7 +785,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
           <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-          <folding />
+          <folding>
+            <marker date="1513078377757" expanded="true" signature="544:596" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="620:631" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="658:674" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="699:710" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="735:746" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="772:784" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="989:1188" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1262:1460" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1539:1686" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1722:1780" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1815:1875" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1952:2143" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -701,7 +845,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Toolbox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
+        <state relative-caret-position="360">
           <caret line="24" column="23" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -711,7 +855,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LinearBioSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1475">
+        <state relative-caret-position="1062">
           <caret line="68" column="4" lean-forward="false" selection-start-line="68" selection-start-column="4" selection-end-line="74" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -721,8 +865,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Microhabitat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#1001#1002#0" expanded="true" />
             <element signature="e#1041#1042#0" expanded="true" />
@@ -732,24 +876,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bacteria.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="48" column="72" lean-forward="false" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FastBacMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="864">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <marker date="1513078377757" expanded="true" signature="544:596" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="620:631" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="658:674" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="699:710" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="735:746" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="772:784" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="989:1188" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1262:1460" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1539:1686" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1722:1780" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1815:1875" ph="{...}" />
+            <marker date="1513078377757" expanded="true" signature="1952:2143" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BioSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1640">
-          <caret line="438" column="22" lean-forward="false" selection-start-line="438" selection-start-column="22" selection-end-line="438" selection-end-column="22" />
+        <state relative-caret-position="784">
+          <caret line="450" column="1" lean-forward="false" selection-start-line="450" selection-start-column="1" selection-end-line="450" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#7806#7814#0" expanded="true" />
@@ -763,6 +912,14 @@
             <element signature="e#13387#13395#0" expanded="true" />
             <element signature="e#13446#13454#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FastBacMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="52" lean-forward="true" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
