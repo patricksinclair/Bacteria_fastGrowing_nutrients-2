@@ -352,12 +352,12 @@ public class BioSystem {
     }
 
     //this was modified to also plot the growth rates and nutrient distributions over time
-    public static void spatialAndNutrientDistributions(){
+    public static void spatialAndNutrientDistributions(double input_alpha){
 
         int L = 500, K = 100, nReps = 10;
-        double interval = 100.;
-        double duration = 2000;
-        double alpha = 0.02;
+        double interval = 20.;
+        double duration = 400;
+        double alpha = input_alpha;
         int S = 500;
 
         String filename = "fastGrowers-alpha-"+String.valueOf(alpha)+"-spatialDistribution";
