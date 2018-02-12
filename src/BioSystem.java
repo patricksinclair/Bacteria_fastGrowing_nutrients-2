@@ -14,7 +14,7 @@ public class BioSystem {
 
     Random rand = new Random();
 
-    public BioSystem(int L, int K, int S, double alpha){
+    public BioSystem(int L, int S, double alpha){
 
         this.L = L;
         this.K = K;
@@ -28,7 +28,7 @@ public class BioSystem {
         for(int i = 0; i < L; i++){
 
             double c_i = Math.exp(alpha*(double)i) - 1.;
-            microhabitats[i] = new Microhabitat(K, c_i, S);
+            microhabitats[i] = new Microhabitat(c_i, S);
         }
         microhabitats[0].fillWithWildType();
     }
@@ -45,7 +45,7 @@ public class BioSystem {
         this.timeElapsed = 0.;
 
         for(int i = 0; i < L; i++) {
-            microhabitats[i] = new Microhabitat(K, c, S);
+            microhabitats[i] = new Microhabitat(c, S);
             microhabitats[i].innoculateWithABActeria();
         }
     }
@@ -124,18 +124,7 @@ public class BioSystem {
         ArrayList<Double> growthRates = new ArrayList<>(L);
 
         for (int i = 0; i < L; i++){
-            Microhabitat m = microhabitats[i];
-            double s_ = m.getS(), s_max_ = m.getS_max();
-            double K_ = m.getK_prime();
-            double c_ = m.getC();
-
-            double mu = s_/(K_+s_);
-            double mu_max = s_max_/(K_+s_max_);
-            double beta = 10. - 9.*mu/mu_max;
-
-            double gR = Math.max(1.-(c_/beta)*(c_/beta), 0.);
-            double repR = gR*(s_/(K_+s_));
-            growthRates.add(repR);
+            growthRates.add(microhabitats[i].getGrowthRate());
         }
         return growthRates;
     }
@@ -234,12 +223,12 @@ public class BioSystem {
             Microhabitat randMicroHab = microhabitats[microHabIndex];
 
             int s = randMicroHab.getS(), s_max = randMicroHab.getS_max();
-            double K_prime = randMicroHab.getK_prime(), c = randMicroHab.getC();
+            double c = randMicroHab.getC();
             Bacteria randBac = randMicroHab.getBacteria(bacteriaIndex);
 
             double migRate = randBac.getB();
             double deaRate = randBac.getD();
-            double repliRate = randBac.replicationRate(c, s, s_max, K_prime);
+            double repliRate = randBac.replicationRate(c, s, s_max);
             double R_max = 1.2;
             double rando = rand.nextDouble()*R_max;
 
@@ -283,7 +272,7 @@ public class BioSystem {
                 double avgMaxPopulation = 0.;
 
                 for(int r = 0; r < nReps; r++) {
-                    BioSystem bs = new BioSystem(L, K, s, c);
+                    BioSystem bs = new BioSystem(L, s, c);
 
                     while(bs.getTimeElapsed() <= duration && !bs.getPopulationDead()) {
                         bs.performAction();
@@ -332,7 +321,7 @@ public class BioSystem {
 
                 for(int r = 0; r < nReps; r++) {
 
-                    BioSystem bs = new BioSystem(L, K, s, alpha);
+                    BioSystem bs = new BioSystem(L, s, alpha);
 
                     while(bs.getTimeElapsed() <= duration && !bs.getPopulationDead()) bs.performAction();
 
@@ -354,9 +343,9 @@ public class BioSystem {
     //this was modified to also plot the growth rates and nutrient distributions over time
     public static void spatialAndNutrientDistributions(double input_alpha){
 
-        int L = 500, K = 100, nReps = 10;
-        double interval = 20.;
-        double duration = 400;
+        int L = 500, nReps = 10;
+        double interval = 100.;
+        double duration = 2000.;
         double alpha = input_alpha;
         int S = 500;
 
@@ -371,14 +360,14 @@ public class BioSystem {
         }
 
 
-        BioSystem bs = new BioSystem(L, K, S, alpha);
+        BioSystem bs = new BioSystem(L, S, alpha);
 
         while(bs.getTimeElapsed() <= duration && !bs.getPopulationDead()){
             bs.performAction();
 
             if((bs.getTimeElapsed()%interval >= 0. && bs.getTimeElapsed()%interval <= 0.01) && !alreadyRecorded){
 
-                System.out.println("Success "+(int)bs.getTimeElapsed());
+                System.out.println("Success "+bs.getTimeElapsed());
                 alreadyRecorded = true;
 
                 ArrayList<Double> popVals = bs.getSpatialDistribution();
@@ -391,61 +380,13 @@ public class BioSystem {
                 Toolbox.writeTwoArraylistsToFile(xVals, nutrientVals, (filenameNutrients+timeValue));
             }
 
-            if(bs.getTimeElapsed()%100. >= 0.1 && alreadyRecorded) alreadyRecorded = false;
+            if(bs.getTimeElapsed()%interval >= 0.1 && alreadyRecorded) alreadyRecorded = false;
 
         }
         System.out.println("duration "+bs.getTimeElapsed());
 
     }
 
-
-    public static void timeTilResistance(){
-
-        int nPoints = 10, nReps = 5;
-        int L = 500, K = 100;
-        double duration = 5000.;
-        String filename = "fastGrowers-timesTilResistance";
-        String filenameNMut = "fastGrowers-noOfMutants";
-
-        ArrayList<Double> sVals = new ArrayList<Double>();
-        ArrayList<Double> alphaVals = new ArrayList<Double>();
-        ArrayList<Double> tVals = new ArrayList<Double>();
-        ArrayList<Double> nMutVals = new ArrayList<>();
-
-        int initS = 10, finalS = 1000;
-        int sIncrement = ((finalS - initS)/nPoints);
-
-        double initAlpha = 0.01, finalAlpha = 0.1;
-        double alphaIncrement = (finalAlpha - initAlpha)/(double)nPoints;
-
-
-        for(int s = initS; s <= finalS; s += sIncrement) {
-            sVals.add((double)s);
-
-            for(double alpha = initAlpha; alpha <= finalAlpha; alpha += alphaIncrement) {
-                alphaVals.add(alpha);
-
-                double avgTimeTilRes = 0.;
-                double avgNoOfMutants = 0;
-
-                for(int r = 0; r < nReps; r++) {
-
-                    BioSystem bs = new BioSystem(L, K, s, alpha);
-
-                    while(!bs.fullMicrohabOfMutants() && !bs.getPopulationDead() && bs.getTimeElapsed() < duration) bs.performAction();
-
-                    avgTimeTilRes+=bs.getTimeElapsed();
-                    avgNoOfMutants+=bs.nMutants();
-                    System.out.println(bs.getTimeElapsed());
-                    System.out.println("sVal: " + s + "\t alphaVal: " + alpha + "\t rep: " + r);
-                }
-                tVals.add(avgTimeTilRes/((double)nReps));
-                nMutVals.add(avgNoOfMutants/(double)nReps);
-            }
-        }
-        Toolbox.writeContoursToFile(sVals, alphaVals, tVals, filename);
-        Toolbox.writeContoursToFile(sVals, alphaVals, nMutVals, filenameNMut);
-    }
-
+    
 
 }
