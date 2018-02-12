@@ -351,7 +351,7 @@ public class BioSystem {
 
         String filename = "fastGrowers-alpha-"+String.valueOf(alpha)+"-spatialDistribution";
         String filenameGRates = "fastGrowers-alpha-"+String.valueOf(alpha)+"-gRateDistribution";
-        String filenameNutrients = "fastGrowers-alpha-"+String.valueOf(alpha)+"-nutrientDistribution";
+        //String filenameNutrients = "fastGrowers-alpha-"+String.valueOf(alpha)+"-nutrientDistribution";
         boolean alreadyRecorded = false;
 
         ArrayList<Double> xVals = new ArrayList<>(L);
@@ -372,12 +372,12 @@ public class BioSystem {
 
                 ArrayList<Double> popVals = bs.getSpatialDistribution();
                 ArrayList<Double> gRateVals = bs.getGrowthRateDistributions();
-                ArrayList<Double> nutrientVals = bs.getNutrientDistribution();
+                //ArrayList<Double> nutrientVals = bs.getNutrientDistribution();
 
                 String timeValue = "-"+String.valueOf((int)bs.getTimeElapsed());
                 Toolbox.writeTwoArraylistsToFile(xVals, popVals, (filename+timeValue));
                 Toolbox.writeTwoArraylistsToFile(xVals, gRateVals, (filenameGRates+timeValue));
-                Toolbox.writeTwoArraylistsToFile(xVals, nutrientVals, (filenameNutrients+timeValue));
+                //Toolbox.writeTwoArraylistsToFile(xVals, nutrientVals, (filenameNutrients+timeValue));
             }
 
             if(bs.getTimeElapsed()%interval >= 0.1 && alreadyRecorded) alreadyRecorded = false;
